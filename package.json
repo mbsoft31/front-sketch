@@ -1,0 +1,23 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "laravel-mix": "^6.0.27",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.7",
+    "webpack-livereload-plugin": "^1.2.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "alpinejs": "^3.2.3"
+  }
+}

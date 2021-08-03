@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/tailwind.css">
+</head>
+<body>
+
+        <div class="min-h-screen h-full w-full flex items-center justify-center bg-gray-100">
+
+            <div x-data="{attachment: false}" class="max-w-lg w-full border rounded-md shadow-md bg-white">
+                <header class="flex items-center py-4 px-6 border-b">
+                    <h1 class="flex-grow text-center text-lg font-semibold tracking-wide">
+                        Create a new post
+                    </h1>
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 hover:bg-gray-100 hover:shadow">
+                        <button class="w-6 h-6 relative bg-transparent border-transparent cursor-pointer">
+                            <span class="absolute h-px w-full bg-gray-900 bg-opacity-50 left-0 top-1/2 transform translate-x-0 -translate-y-1/2 rotate-45"></span>
+                            <span class="absolute h-full w-px bg-gray-900 bg-opacity-50 left-1/2 top-0 transform -translate-x-1/2 translate-y-0 rotate-45"></span>
+                        </button>
+                    </div>
+    
+                </header>
+                <main class="py-6 px-4">
+                    <div class="w-full">
+                        <textarea
+                            name="content"
+                            id="content"
+                            rows="3"
+                            placeholder="Your content goes here"
+                            class="w-full text-xl text-gray-700 placeholder-gray-400 border-transparent rounded-md focus:ring-0 focus:border-transparent"
+                        ></textarea>
+                    </div>
+                    <div x-show="attachment" class="w-full" style="display: none;">
+    
+                        <div class="relative flex items-center justify-center w-full h-32 border-4 border-dashed ">
+                            <input
+                                type="file"
+                                accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.jpg,.jpeg,.png,.pdf"
+                                name="content" id="content"
+                                placeholder="select a file to upload"
+                                class="absolute opacity-0 w-full h-full"/>
+                            <div class="text-lg text-gray-600 font-semibold tracking-wider">
+                                Select a file to upload
+                            </div>
+                        </div>
+    
+                    </div>
+                </main>
+                <footer class="">
+                    <div class="px-6 py-4 flex items-center gap-4 w-full">
+                        <button type="button" x-text="'Add an attachment'" @click="attachment = ! attachment" :class="{'bg-gray-500 text-gray-100': attachment, 'text-gray-600 bg-gray-50': !attachment}" class="uppercase px-6 py-2 text-center text-sm font-semibold tracking-wide border rounded-md"></button>
+                    </div>
+                    <div class="flex items-center py-4 px-6 border-t bg-gray-50">
+                        <button class="flex-grow px-6 py-2 text-lg font-semibold tracking-wide border rounded-md shadow bg-gray-700 text-gray-50 hover:bg-gray-500 hover:text-white">
+                            Post
+                        </button>
+                    </div>
+                </footer>
+            </div>
+    
+        </div>
+
+
+    <script src="public/js/app.js"></script>
+</body>
+</html>
